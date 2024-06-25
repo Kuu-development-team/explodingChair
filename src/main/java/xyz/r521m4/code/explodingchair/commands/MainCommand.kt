@@ -29,7 +29,7 @@ class MainCommand : CommandExecutor, TabCompleter{
         return true
     }
 
-    override fun onTabComplete(sender: CommandSender, cmd: Command, str: String, arg: Array<out String>): List<String>? {
+    override fun onTabComplete(sender: CommandSender, cmd: Command, str: String, arg: Array<out String>): List<String> {
         if(cmd.name == "explodingchair" || cmd.name == "ec"){
             if (arg.size == 1) {
                 val completions = listOf("start", "stop")
