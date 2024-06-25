@@ -2,3 +2,9 @@ name: explodingChair
 version: '${project.version}'
 main: xyz.r521m4.code.explodingchair.ExplodingChair
 api-version: '1.20'
+
+commands:
+  explodingchair:
+    usage: /ec <start/stop> <Player> <Player>
+    aliases:
+      - ec

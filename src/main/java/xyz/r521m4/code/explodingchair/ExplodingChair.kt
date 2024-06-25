@@ -1,12 +1,14 @@
 package xyz.r521m4.code.explodingchair
 
-import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
+import xyz.r521m4.code.explodingchair.commands.MainCommand
+import xyz.r521m4.code.explodingchair.listeners.PlayerInteractEvent
 
-class ExplodingChair : JavaPlugin() , Listener{
+class ExplodingChair : JavaPlugin(){
     override fun onEnable() {
         // Plugin startup logic
-        server.pluginManager.registerEvents(this, this)
+        getCommand("explodingchair")?.setExecutor(MainCommand())
+        server.pluginManager.registerEvents(PlayerInteractEvent(), this)
     }
 
     override fun onDisable() {
